@@ -1,0 +1,10 @@
+logs/
+/bin/
+**/target/**
+**/.settings/**
+.classpath
+.project
+**/.idea/**
+**.iml
+pom.xml.bak
+/workbench/**

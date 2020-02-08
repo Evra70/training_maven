@@ -1,0 +1,26 @@
+{
+  "package": "org.jleaf.learn.web",
+  "menu": [
+      {
+        "label":"learn",
+        "submenu":[
+            {
+              "label":"general",
+              "columnIndex":0,
+              "submenu":[
+                {
+                  "label":"helloWorld",
+                  "url":"viewWelcome",
+                  "task":"system"
+                },
+                {
+                  "label":"basic",
+                  "url":"viewBasic",
+                  "task":"system"
+                }
+              ]
+            }
+        ]
+      }
+    ]
+}

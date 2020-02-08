@@ -1,0 +1,2 @@
+INDEX VERSION 1.4+/home/sts/training/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1457393869.index

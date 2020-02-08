@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;viewWelcome.xhtml&apos; to &apos;viewWelcome.xhtml&apos;&#x0A;- Original project: &apos;learn-web&apos;&#x0A;- Destination element: &apos;viewWelcome.xhtml&apos;&#x0A;- Original element: &apos;viewWelcome.xhtml&apos;" description="Copy file" element1="src/main/resources/org/jleaf/learn/web/viewWelcome.xhtml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1581133991363" target="/learn-web/src/main/resources/org/jleaf/learn/web/viewWelcome.xhtml" units="0" version="1.0"/>
+</session>
