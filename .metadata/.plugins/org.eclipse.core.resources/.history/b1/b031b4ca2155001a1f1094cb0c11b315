@@ -1,0 +1,51 @@
+# A
+
+# B
+org.jleaf.learn.web.basic=Basic
+
+# G
+org.jleaf.learn.web.general=General
+
+# H
+org.jleaf.learn.web.helloWorld=Hello World
+
+# J
+org.jleaf.learn.web.jleafUi=Jleaf UI
+
+# K
+
+# L
+org.jleaf.learn.web.learn=Learn
+
+#M
+org.jleaf.learn.web.sample=Sample
+
+org.jleaf.learn.web.keyword=Keyword
+
+org.jleaf.learn.web.active=Active
+
+org.jleaf.learn.web.yes=Yes
+
+org.jleaf.learn.web.no=No
+
+org.jleaf.learn.web.search=Search
+
+org.jleaf.learn.web.code=Code
+
+org.jleaf.learn.web.name=Name
+
+org.jleaf.learn.web.title=Add Sample
+
+org.jleaf.learn.web.addData=+ Add Data
+
+org.jleaf.learn.web.save=Save
+
+org.jleaf.learn.web.sampleCode=Sample Code
+
+org.jleaf.learn.web.action=Action
+
+org.jleaf.learn.web.sampleName=Sample Name
+
+org.jleaf.learn.web.edit=Edit
+
+org.jleaf.learn.web.remove=Remove

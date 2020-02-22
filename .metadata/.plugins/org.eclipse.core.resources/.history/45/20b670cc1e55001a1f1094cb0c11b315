@@ -1,0 +1,78 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:p="http://primefaces.org/ui"
+	  xmlns:j="http://jleaf.org/faces"
+	  xmlns:jl="http://java.sun.com/jsf/composite/jlcomponents">
+
+	<ui:composition template="/WEB-INF/layouts/base.xhtml">
+		<ui:define name="headPart">
+			<j:lang id="lang" prefix="org.jleaf.learn.web" />
+
+			<title>#{piece['sample']}</title>
+		</ui:define>
+
+		<ui:define name="contentPart">
+			<p:panel>
+				<p:panelGrid columns="3">
+					<h:outputText value="#{piece['keyword']}" />
+					<h:outputText value="#{piece['active']}" />
+					<h:outputText />
+					
+					<p:inputText />
+					<p:selectOneButton>
+						<f:selectItem itemLabel="#{piece['yes']}" itemValue="Y" />
+						<f:selectItem itemLabel="#{piece['no']}" itemValue="N" />
+					</p:selectOneButton>	
+					<p:commandButton value="#{piece['search']}" />
+				</p:panelGrid>
+				
+				<p:commandButton value="#{piece['addData']}" onclick="dialogAddData.show()" />
+				<br/>
+				<br/>
+				
+				<p:dataTable var="item" value="#{viewSampleController.dataList}" id="dataTable" style="width:60%;">
+					<p:column headerText="#{piece['sampleCode']}">
+						<h:outputText value="#{item['sampleCode']}"></h:outputText>
+					</p:column>
+					<p:column headerText="#{piece['sampleName']}">
+						<h:outputText value="#{item['sampleName']}"></h:outputText>
+					</p:column>
+					<p:column headerText="#{piece['active']}">
+						<h:outputText value="#{item['active']=='Y'?'YES':'NO'}"></h:outputText>
+					</p:column>
+				</p:dataTable>
+				<h:outputText id="isi" value="#{viewSampleController.dataList}"/>
+			</p:panel>
+		</ui:define>
+
+		<ui:define name="outsidePart">
+			<p:dialog header="#{piece['title']}" 
+						widgetVar="dialogAddData" 
+						height="180"
+						width="400"
+						modal="true">
+					<p:panelGrid columns="2">
+						<h:outputText value="#{piece['code']}" />
+						<p:inputText value="#{viewSampleController.addData['sampleCode']}"/>
+						
+						<h:outputText value="#{piece['name']}" />
+						<p:inputText value="#{viewSampleController.addData['sampleName']}"/>
+						
+						<h:outputText value="#{piece['active']}" />
+						<p:selectOneButton value="#{viewSampleController.addData['active']}">
+						<f:selectItem itemLabel="#{piece['yes']}" itemValue="Y" />
+						<f:selectItem itemLabel="#{piece['no']}" itemValue="N" />
+						</p:selectOneButton>	
+						
+						<p:commandButton value="#{piece['save']}" 
+										actionListener="#{viewSampleController.addDataProcess()}"
+										update=":rootform:dataTable"/>
+						<h:outputText/>
+						
+					</p:panelGrid>
+			</p:dialog>
+		</ui:define>
+	</ui:composition>
+</html>

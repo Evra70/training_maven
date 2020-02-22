@@ -1,0 +1,72 @@
+package org.jleaf.learn.web.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.simple.JSONObject;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
+
+@Controller
+@Scope("view")
+public class ViewSampleController {
+	
+	private List<JSONObject> dataList = new ArrayList<>();
+	
+	private JSONObject addData = new JSONObject();
+	private JSONObject editData = new JSONObject();
+	
+	public ViewSampleController() {
+		
+		JSONObject item1 = new JSONObject();
+		item1.put("sampleCode", "SMP1");
+		item1.put("sampleName", "Sample1");
+		item1.put("active", "Y");
+		
+		JSONObject item2 = new JSONObject();
+		item2.put("sampleCode", "SMP2");
+		item2.put("sampleName", "Sample2");
+		item2.put("active", "Y");
+		
+		JSONObject item3 = new JSONObject();
+		item3.put("sampleCode", "SMP3");
+		item3.put("sampleName", "Sample3");
+		item3.put("active", "Y");
+		
+		dataList.add(item1);
+		dataList.add(item2);
+		dataList.add(item3);
+	}
+	
+	public void addDataProcess() {
+		JSONObject dataToAdd = (JSONObject) addData.clone();
+		dataList.add(dataToAdd);
+	}
+	
+	public void editDataProcess(JSONObject item) {
+		editData = item;
+	}
+	
+	public List<JSONObject> getDataList(){
+		return dataList;
+	}
+	
+	public void setDataList(List<JSONObject> dataList) {
+		this.dataList =dataList;
+	}
+	
+	public JSONObject getAddData() {
+		return addData;
+	}
+	
+	public void setAddData(JSONObject addData) {
+		this.addData = addData;
+	}
+	
+	public JSONObject getEditData() {
+		return editData;
+	}
+	public void setEditData(JSONObject editData) {
+		this.editData = editData;
+	}
+}
